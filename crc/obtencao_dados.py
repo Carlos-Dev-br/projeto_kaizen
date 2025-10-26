@@ -7,6 +7,8 @@ BASE_URL = "http://ec2-52-67-119-247.sa-east-1.compute.amazonaws.com:8000"
 LOGIN_URL = f"{BASE_URL}/login"
 HEALTH_URL = f"{BASE_URL}/health"
 POKEMON_URL = f"{BASE_URL}/pokemon"
+COMBATE_URL = f"{BASE_URL}/combats"
+
 
 def get_headers(token: str):
     return {"Authorization": f"Bearer {token}"}
@@ -76,9 +78,9 @@ def obter_dados_pokemon(token):
 def obter_atributos_pokemon(token):
     lista_atributos_pokemon = []
     headers = get_headers(token)
-
+    print("Iniciando coleta dos dados referente aos atributos dos Pokémons...\n")
     try:
-        df_id = pd.read_csv("pokemons.csv")
+        df_id = pd.read_csv("out/pokemons.csv")
         print(f"{len(df_id)} Pokémons carregados do arquivo CSV.\n")
 
         for pokemon_id in df_id["ID"]:
@@ -87,7 +89,7 @@ def obter_atributos_pokemon(token):
             if response.status_code != 200:
                 print(f"Erro ao consultar os Atributos do Pokémon {pokemon_id}: {response.status_code}")
                 print(response.text)
-                continue  
+                continue
 
             dados = response.json()
 
@@ -116,9 +118,9 @@ def obter_atributos_pokemon(token):
                 "Legendary": legendary,
                 "Types": types
             })
-            
+
             sleep(0.5)
-        print(f"\nTotal de Pokémons detalhados: {len(lista_atributos_pokemon)}")
+        print(f"\nTotal de atributos dos Pokémons detalhados: {len(lista_atributos_pokemon)}")
 
     except FileNotFoundError:
         print("Arquivo 'pokemons.csv' não encontrado.")
@@ -130,16 +132,62 @@ def obter_atributos_pokemon(token):
     return lista_atributos_pokemon
 
 
+def obter_dados_combate(token):
+    lista_combates = []
+    headers = get_headers(token)
+
+    print("Iniciando coleta de dados de combates...\n")
+    try:
+        for i in range(1, 501):
+            response = requests.get(f"{COMBATE_URL}?page={i}&per_page=100", headers=headers)
+
+            if response.status_code != 200:
+                print(f"Erro na página {i}: {response.status_code}")
+                print(response.text)
+                break
+
+            dados = response.json()
+            combates = dados.get("combats", [])
+
+            if not combates:
+                print("Todos os dados dos Combates foram obtidos.")
+                break
+
+            for c in combates:
+                first_pokemon = c.get("first_pokemon")
+                second_pokemon = c.get("second_pokemon")
+                winner = c.get("winner")
+
+                lista_combates.append({
+                    "first_pokemon": first_pokemon,
+                    "second_pokemon": second_pokemon,
+                    "winner": winner
+                })
+
+    except requests.exceptions.RequestException as e:
+        print("Ocorreu um erro na requisição:", str(e))
+
+    print(f"Total de combates realizados: {len(lista_combates)}\n")
+    return lista_combates
+
+
 def transformar_csv(dados, file_):
     if file_ == 'pokemons':
-        with open(f"{file_}.csv", mode="w", newline="", encoding="utf-8") as file:
+        with open(f"out/{file_}.csv", mode="w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
             writer.writerow(["ID", "Nome"])
             for id_, nome in dados:
                 writer.writerow([id_, nome])
     elif file_ == 'atributos_pokemon':
-        with open(f"{file_}.csv", mode="w", newline="", encoding="utf-8") as file:
+        with open(f"out/{file_}.csv", mode="w", newline="", encoding="utf-8") as file:
             fieldnames = ["ID", "Nome", "Hp", "Attack", "Defense", "Sp_attack", "Sp_defense", "Speed", "Generation", "Legendary", "Types"]
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+            writer.writeheader()
+            for item in dados:
+                writer.writerow(item)
+    elif file_ == 'combates':
+        with open(f"out/{file_}.csv", mode="w", newline="", encoding="utf-8") as file:
+            fieldnames = ["first_pokemon", "second_pokemon", "winner"]
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
             for item in dados:
@@ -158,5 +206,7 @@ if __name__ == "__main__":
         transformar_csv(lista, 'pokemons')
         lista_atributos = obter_atributos_pokemon(token)
         transformar_csv(lista_atributos, 'atributos_pokemon')
+        lista_combates = obter_dados_combate(token)
+        transformar_csv(lista_combates, 'combates')
     else:
         print("Falha ao obter token JWT.")
