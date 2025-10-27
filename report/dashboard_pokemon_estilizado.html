@@ -1,0 +1,206 @@
+
+    <html>
+    <head>
+        <title>Dashboard Pokémon</title>
+        <meta charset="utf-8">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <style>
+            body { font-family: Arial; background-color: #f5f5f5; margin: 20px; }
+            h1 { text-align: center; color: #ff1a1a; }
+            h2 { text-align: center; color: #333; margin-top:40px; }
+            table { margin-left:auto; margin-right:auto; border-collapse: collapse; width: 80%; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+            th { background-color: #1f77b4; color: white; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+            .card { background-color: white; padding: 20px; margin: 20px auto; width: 80%; box-shadow: 0 0 10px rgba(0,0,0,0.15); border-radius: 10px; }
+        </style>
+    </head>
+    <body>
+        <h1>📊 Dashboard Pokémon - Top 10</h1>
+        <div class="card">
+            <h2>🏆 Top 10 Vencedores</h2>
+            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pokemon</th>
+      <th>Lutas</th>
+      <th>Vitorias</th>
+      <th>Derrotas</th>
+      <th>Taxa_Vitoria(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mewtwo</td>
+      <td>160</td>
+      <td>149.0</td>
+      <td>11.0</td>
+      <td>93.12</td>
+    </tr>
+    <tr>
+      <td>Jirachi</td>
+      <td>148</td>
+      <td>131.0</td>
+      <td>17.0</td>
+      <td>88.51</td>
+    </tr>
+    <tr>
+      <td>Aerodactyl</td>
+      <td>136</td>
+      <td>131.0</td>
+      <td>5.0</td>
+      <td>96.32</td>
+    </tr>
+    <tr>
+      <td>Deoxys Speed Forme</td>
+      <td>140</td>
+      <td>129.0</td>
+      <td>11.0</td>
+      <td>92.14</td>
+    </tr>
+    <tr>
+      <td>Infernape</td>
+      <td>140</td>
+      <td>129.0</td>
+      <td>11.0</td>
+      <td>92.14</td>
+    </tr>
+    <tr>
+      <td>Slaking</td>
+      <td>142</td>
+      <td>126.0</td>
+      <td>16.0</td>
+      <td>88.73</td>
+    </tr>
+    <tr>
+      <td>Murkrow</td>
+      <td>152</td>
+      <td>125.0</td>
+      <td>27.0</td>
+      <td>82.24</td>
+    </tr>
+    <tr>
+      <td>Mega Absol</td>
+      <td>133</td>
+      <td>124.0</td>
+      <td>9.0</td>
+      <td>93.23</td>
+    </tr>
+    <tr>
+      <td>Mega Houndoom</td>
+      <td>130</td>
+      <td>123.0</td>
+      <td>7.0</td>
+      <td>94.62</td>
+    </tr>
+    <tr>
+      <td>Leafeon</td>
+      <td>146</td>
+      <td>122.0</td>
+      <td>24.0</td>
+      <td>83.56</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+        <div class="card">
+            <h2>💀 Top 10 Derrotados</h2>
+            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pokemon</th>
+      <th>Lutas</th>
+      <th>Vitorias</th>
+      <th>Derrotas</th>
+      <th>Taxa_Vitoria(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Elgyem</td>
+      <td>150</td>
+      <td>18.0</td>
+      <td>132.0</td>
+      <td>12.00</td>
+    </tr>
+    <tr>
+      <td>Shuckle</td>
+      <td>130</td>
+      <td>0.0</td>
+      <td>130.0</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Shellos</td>
+      <td>147</td>
+      <td>18.0</td>
+      <td>129.0</td>
+      <td>12.24</td>
+    </tr>
+    <tr>
+      <td>Corphish</td>
+      <td>148</td>
+      <td>21.0</td>
+      <td>127.0</td>
+      <td>14.19</td>
+    </tr>
+    <tr>
+      <td>Wurmple</td>
+      <td>134</td>
+      <td>8.0</td>
+      <td>126.0</td>
+      <td>5.97</td>
+    </tr>
+    <tr>
+      <td>Oddish</td>
+      <td>133</td>
+      <td>8.0</td>
+      <td>125.0</td>
+      <td>6.02</td>
+    </tr>
+    <tr>
+      <td>Machop</td>
+      <td>144</td>
+      <td>20.0</td>
+      <td>124.0</td>
+      <td>13.89</td>
+    </tr>
+    <tr>
+      <td>Nosepass</td>
+      <td>136</td>
+      <td>12.0</td>
+      <td>124.0</td>
+      <td>8.82</td>
+    </tr>
+    <tr>
+      <td>Silcoon</td>
+      <td>126</td>
+      <td>3.0</td>
+      <td>123.0</td>
+      <td>2.38</td>
+    </tr>
+    <tr>
+      <td>Paras</td>
+      <td>135</td>
+      <td>13.0</td>
+      <td>122.0</td>
+      <td>9.63</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+        <div class="card">
+            <h2>📊 Comparativo de Atributos</h2>
+            <div id="grafico_barras"></div>
+        </div>
+        <div class="card">
+            <h2>🕸️ Gráfico Radar - Top 10 vs Média Geral</h2>
+            <div id="grafico_radar"></div>
+        </div>
+        <script>
+            Plotly.newPlot('grafico_barras', {"data":[{"marker":{"color":"#1f77b4"},"name":"M\u00e9dia Top 10","x":["Speed","Attack","Sp_attack","Hp","Defense","Sp_defense","ID"],"y":{"dtype":"f8","bdata":"mpmZmZkZXUCamZmZmblbQDMzMzMzM1lAzczMzMysVEAzMzMzM\u002fNUQDMzMzMzs1JAzczMzMysdEA="},"type":"bar"},{"marker":{"color":"#ff7f0e"},"name":"M\u00e9dia Geral","x":["Speed","Attack","Sp_attack","Hp","Defense","Sp_defense","ID"],"y":{"dtype":"f8","bdata":"j8L1KFwPUUCuR+F6FL5TQPYoXI\u002fCNVJAcT0K16NQUUDXo3A9CndSQJqZmZmZ+VFAH4XrUbgOeUA="},"type":"bar"}],"layout":{"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"barmode":"group","title":{"text":"Comparativo de Atributos: Top 10 vs M\u00e9dia Geral"},"xaxis":{"title":{"text":"Atributos"}},"yaxis":{"title":{"text":"Valor M\u00e9dio"}}}});
+            Plotly.newPlot('grafico_radar', {"data":[{"fill":"toself","name":"Aerodactyl","r":[154,80.0,105.0,65.0,60,75,130.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Mewtwo","r":[163,106.0,110.0,90.0,154,90,130.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Murkrow","r":[214,60.0,85.0,42.0,85,42,91.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Mega Houndoom","r":[249,75.0,90.0,90.0,140,90,115.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Slaking","r":[314,150.0,160.0,100.0,95,65,100.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Mega Absol","r":[394,65.0,150.0,60.0,115,60,115.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Jirachi","r":[428,100.0,100.0,100.0,100,100,100.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Deoxys Speed Forme","r":[432,50.0,95.0,90.0,95,90,180.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Infernape","r":[438,76.0,104.0,71.0,104,71,108.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","name":"Leafeon","r":[522,65.0,110.0,130.0,60,65,95.0],"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"},{"fill":"toself","line":{"color":"black","dash":"dash"},"name":"M\u00e9dia Geral","r":{"dtype":"f8","bdata":"H4XrUbgOeUBxPQrXo1BRQK5H4XoUvlNA16NwPQp3UkD2KFyPwjVSQJqZmZmZ+VFAj8L1KFwPUUA="},"theta":["ID","Hp","Attack","Defense","Sp_attack","Sp_defense","Speed"],"type":"scatterpolar"}],"layout":{"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"polar":{"radialaxis":{"visible":true}},"title":{"text":"Radar: Top 10 vs M\u00e9dia Geral"}}});
+        </script>
+    </body>
+    </html>
+    
